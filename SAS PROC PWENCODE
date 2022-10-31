@@ -1,0 +1,10 @@
+Criptografia de senha 
+
+Proc pwencode in ='senha'; run; /*copiar a criptografia gerada no log*/
+
+/*declaração da variavel que vai  carregar a senha e o  usuario*/
+
+%let user ='senha'
+%let pass = 'colocar a criptografia gerada no log  começado em {SAS002}7E.......;'
+
+
