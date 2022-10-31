@@ -1,0 +1,20 @@
+LIBNAME  NOME DADO teradata server='server' user='&user.' password='&.pass' database='banco de dados' mode=teradata tpt=yes (metodologia de carregamento e extração) connection=global (conexao temporaria e nao salva a tabela no banco) fastexport=yes(metodo de exportação engine de extração)
+
+Proc SQL threads noprint buffersize= 8g stimer;
+CONNECT TO TERADATA AS NOME DADO (SERVER = 'SERVER' USER='' PASSWORD='' MODE=TERADATA TPT=YES FASTEXPORT=YES TPT_MAX_SESSIONS=5);
+
+CREATE TABLE TABELA AS
+SELECT *
+FROM CONNECTION TO NOME DADO
+(SELECT DISTINCT
+COLUNA1,
+COLUNA2
+COLUNA3
+FROM PACCASA.BASE
+WHERE COLUNA1 =''
+);
+DISCONNECT FROM NOME DADO
+
+
+
+
